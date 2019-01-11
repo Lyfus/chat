@@ -22,6 +22,7 @@ namespace Chat
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
     /// </summary>
+    
     public sealed partial class MessagePage : Page
     {
         private ObservableCollection<Messages> _messages = new ObservableCollection<Messages>();
@@ -38,10 +39,18 @@ namespace Chat
             set { _friend = value; }
         }
 
+        User ConnectedUser;
+
         public MessagePage()
         {
             DataContext = this;
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            ConnectedUser = e.Parameter as User;
         }
     }
 }

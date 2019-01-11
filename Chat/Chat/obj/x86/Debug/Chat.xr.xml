@@ -5,6 +5,7 @@
     <RootPropertyPathName Name="Content" />
     <RootPropertyPathName Name="User" />
     <RootPropertyPathName Name="Pseudo" />
+    <RootPropertyPathName Name="ConnectedUser" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -31,6 +32,7 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Foreground" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="HorizontalAlignment" />
@@ -84,6 +86,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding" />
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
+      <RootProperty Name="Content" />
       <RootProperty Name="PrimaryCommands" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">

@@ -10,15 +10,16 @@ namespace Chat.Classes
     {
         public int Id { get; set; }
         public string Pseudo { get; set; }
-        public string Password { get; set; }
-        private List<Group> _groups = new List<Group>();
-        public List<Group> Groups { get { return _groups; } }
+        public List<string> Groups { get; set; }
+        //public List<Group> Groups {
+        //    get { return _groups; }
+        //    set { _groups = value; }
+        //}
 
-        public User(int id, string pseudo, string password)
+        public User(int id, string pseudo)
         {
             Id = id;
-            Pseudo = pseudo;
-            Password = password;
+            Pseudo = pseudo;           
         }
     }
 }

@@ -27,13 +27,13 @@
         </ListView>
         <StackPanel Grid.Column="1">
             <ScrollViewer Height="650">
-                <ListView x:ConnectionId='3'                                 BorderBrush="Black" BorderThickness="2">
+                <ListView x:ConnectionId='4'                                 BorderBrush="Black" BorderThickness="2">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
                                 <TextBlock Text="{Binding Messages.User.Pseudo}"/>
                                 <StackPanel>
-                                    <TextBlock Text="{Binding Messages.Content}" />
+                                    <TextBlock x:Name="textblock1" Text="{Binding Messages.Content}" />
                                 </StackPanel>
                             </StackPanel>
                         </DataTemplate>
@@ -41,13 +41,13 @@
                 </ListView>
             </ScrollViewer>
             <StackPanel Orientation="Horizontal">
-                <TextBox Width="1200" Height="100" />
+                <TextBox x:ConnectionId='3' x:Name="textbox1" Width="1200" Height="100" />
                 <Button Content="Send" VerticalAlignment="Center" Width="106" />
             </StackPanel>
         </StackPanel>
     </Grid>
     <Page.BottomAppBar>
-        <CommandBar>
+        <CommandBar Content="{Binding ConnectedUser.Pseudo}">
             <AppBarButton Icon="Add" Label="Ajouter un utilisateur" />
         </CommandBar>
     </Page.BottomAppBar>

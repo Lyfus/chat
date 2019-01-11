@@ -189,7 +189,7 @@ namespace Chat.Chat_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[17];
+            _typeNameTable = new string[16];
             _typeNameTable[0] = "Chat.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -204,11 +204,10 @@ namespace Chat.Chat_XamlTypeInfo
             _typeNameTable[11] = "String";
             _typeNameTable[12] = "Chat.Classes.User";
             _typeNameTable[13] = "System.Collections.Generic.List`1<Chat.Classes.User>";
-            _typeNameTable[14] = "System.Collections.Generic.List`1<Chat.Classes.Group>";
-            _typeNameTable[15] = "Chat.Classes.Group";
-            _typeNameTable[16] = "Chat.Register";
+            _typeNameTable[14] = "System.Collections.Generic.List`1<String>";
+            _typeNameTable[15] = "Chat.Register";
 
-            _typeTable = new global::System.Type[17];
+            _typeTable = new global::System.Type[16];
             _typeTable[0] = typeof(global::Chat.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -223,9 +222,8 @@ namespace Chat.Chat_XamlTypeInfo
             _typeTable[11] = typeof(global::System.String);
             _typeTable[12] = typeof(global::Chat.Classes.User);
             _typeTable[13] = typeof(global::System.Collections.Generic.List<global::Chat.Classes.User>);
-            _typeTable[14] = typeof(global::System.Collections.Generic.List<global::Chat.Classes.Group>);
-            _typeTable[15] = typeof(global::Chat.Classes.Group);
-            _typeTable[16] = typeof(global::Chat.Register);
+            _typeTable[14] = typeof(global::System.Collections.Generic.List<global::System.String>);
+            _typeTable[15] = typeof(global::Chat.Register);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -265,8 +263,8 @@ namespace Chat.Chat_XamlTypeInfo
         private object Activate_4_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Chat.Classes.Messages>(); }
         private object Activate_5_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Chat.Classes.Messages>(); }
         private object Activate_13_List() { return new global::System.Collections.Generic.List<global::Chat.Classes.User>(); }
-        private object Activate_14_List() { return new global::System.Collections.Generic.List<global::Chat.Classes.Group>(); }
-        private object Activate_16_Register() { return new global::Chat.Register(); }
+        private object Activate_14_List() { return new global::System.Collections.Generic.List<global::System.String>(); }
+        private object Activate_15_Register() { return new global::Chat.Register(); }
         private void VectorAdd_4_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Chat.Classes.Messages>)instance;
@@ -287,8 +285,8 @@ namespace Chat.Chat_XamlTypeInfo
         }
         private void VectorAdd_14_List(object instance, object item)
         {
-            var collection = (global::System.Collections.Generic.ICollection<global::Chat.Classes.Group>)instance;
-            var newItem = (global::Chat.Classes.Group)item;
+            var collection = (global::System.Collections.Generic.ICollection<global::System.String>)instance;
+            var newItem = (global::System.String)item;
             collection.Add(newItem);
         }
 
@@ -377,7 +375,6 @@ namespace Chat.Chat_XamlTypeInfo
                 userType = new global::Chat.Chat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.AddMemberName("Id");
                 userType.AddMemberName("Pseudo");
-                userType.AddMemberName("Password");
                 userType.AddMemberName("Groups");
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -390,25 +387,16 @@ namespace Chat.Chat_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 14:   //  System.Collections.Generic.List`1<Chat.Classes.Group>
+            case 14:   //  System.Collections.Generic.List`1<String>
                 userType = new global::Chat.Chat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.CollectionAdd = VectorAdd_14_List;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 15:   //  Chat.Classes.Group
-                userType = new global::Chat.Chat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.AddMemberName("Id");
-                userType.AddMemberName("Description");
-                userType.AddMemberName("Users");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 16:   //  Chat.Register
+            case 15:   //  Chat.Register
                 userType = new global::Chat.Chat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_16_Register;
+                userType.Activator = Activate_15_Register;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -497,45 +485,15 @@ namespace Chat.Chat_XamlTypeInfo
             var that = (global::Chat.Classes.User)instance;
             that.Pseudo = (global::System.String)Value;
         }
-        private object get_8_User_Password(object instance)
-        {
-            var that = (global::Chat.Classes.User)instance;
-            return that.Password;
-        }
-        private void set_8_User_Password(object instance, object Value)
-        {
-            var that = (global::Chat.Classes.User)instance;
-            that.Password = (global::System.String)Value;
-        }
-        private object get_9_User_Groups(object instance)
+        private object get_8_User_Groups(object instance)
         {
             var that = (global::Chat.Classes.User)instance;
             return that.Groups;
         }
-        private object get_10_Group_Id(object instance)
+        private void set_8_User_Groups(object instance, object Value)
         {
-            var that = (global::Chat.Classes.Group)instance;
-            return that.Id;
-        }
-        private void set_10_Group_Id(object instance, object Value)
-        {
-            var that = (global::Chat.Classes.Group)instance;
-            that.Id = (global::System.Int32)Value;
-        }
-        private object get_11_Group_Description(object instance)
-        {
-            var that = (global::Chat.Classes.Group)instance;
-            return that.Description;
-        }
-        private void set_11_Group_Description(object instance, object Value)
-        {
-            var that = (global::Chat.Classes.Group)instance;
-            that.Description = (global::System.Int32)Value;
-        }
-        private object get_12_Group_Users(object instance)
-        {
-            var that = (global::Chat.Classes.Group)instance;
-            return that.Users;
+            var that = (global::Chat.Classes.User)instance;
+            that.Groups = (global::System.Collections.Generic.List<global::System.String>)Value;
         }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
@@ -593,35 +551,11 @@ namespace Chat.Chat_XamlTypeInfo
                 xamlMember.Getter = get_7_User_Pseudo;
                 xamlMember.Setter = set_7_User_Pseudo;
                 break;
-            case "Chat.Classes.User.Password":
-                userType = (global::Chat.Chat_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Chat.Classes.User");
-                xamlMember = new global::Chat.Chat_XamlTypeInfo.XamlMember(this, "Password", "String");
-                xamlMember.Getter = get_8_User_Password;
-                xamlMember.Setter = set_8_User_Password;
-                break;
             case "Chat.Classes.User.Groups":
                 userType = (global::Chat.Chat_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Chat.Classes.User");
-                xamlMember = new global::Chat.Chat_XamlTypeInfo.XamlMember(this, "Groups", "System.Collections.Generic.List`1<Chat.Classes.Group>");
-                xamlMember.Getter = get_9_User_Groups;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Chat.Classes.Group.Id":
-                userType = (global::Chat.Chat_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Chat.Classes.Group");
-                xamlMember = new global::Chat.Chat_XamlTypeInfo.XamlMember(this, "Id", "Int32");
-                xamlMember.Getter = get_10_Group_Id;
-                xamlMember.Setter = set_10_Group_Id;
-                break;
-            case "Chat.Classes.Group.Description":
-                userType = (global::Chat.Chat_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Chat.Classes.Group");
-                xamlMember = new global::Chat.Chat_XamlTypeInfo.XamlMember(this, "Description", "Int32");
-                xamlMember.Getter = get_11_Group_Description;
-                xamlMember.Setter = set_11_Group_Description;
-                break;
-            case "Chat.Classes.Group.Users":
-                userType = (global::Chat.Chat_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Chat.Classes.Group");
-                xamlMember = new global::Chat.Chat_XamlTypeInfo.XamlMember(this, "Users", "System.Collections.Generic.List`1<Chat.Classes.User>");
-                xamlMember.Getter = get_12_Group_Users;
-                xamlMember.SetIsReadOnly();
+                xamlMember = new global::Chat.Chat_XamlTypeInfo.XamlMember(this, "Groups", "System.Collections.Generic.List`1<String>");
+                xamlMember.Getter = get_8_User_Groups;
+                xamlMember.Setter = set_8_User_Groups;
                 break;
             }
             return xamlMember;

@@ -33,7 +33,7 @@
                             <StackPanel>
                                 <TextBlock Text="{Binding Messages.User.Pseudo}"/>
                                 <StackPanel>
-                                    <TextBlock Text="{Binding Messages.Content}" />
+                                    <TextBlock x:Name="textblock1" Text="{Binding Messages.Content}" />
                                 </StackPanel>
                             </StackPanel>
                         </DataTemplate>
@@ -41,13 +41,13 @@
                 </ListView>
             </ScrollViewer>
             <StackPanel Orientation="Horizontal">
-                <TextBox Width="1200" Height="100" />
+                <TextBox x:Name="textbox1" Width="1200" Height="100" />
                 <Button Content="Send" VerticalAlignment="Center" Width="106" />
             </StackPanel>
         </StackPanel>
     </Grid>
     <Page.BottomAppBar>
-        <CommandBar>
+        <CommandBar Content="{Binding ConnectedUser.Pseudo}">
             <AppBarButton Icon="Add" Label="Ajouter un utilisateur" />
         </CommandBar>
     </Page.BottomAppBar>
