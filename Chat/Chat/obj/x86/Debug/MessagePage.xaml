@@ -41,7 +41,7 @@
                 </ListView>
             </ScrollViewer>
             <StackPanel Orientation="Horizontal">
-                <TextBox Width="800" Height="100" />
+                <TextBox Width="1200" Height="100" />
                 <Button Content="Send" VerticalAlignment="Center" Width="106" />
             </StackPanel>
         </StackPanel>
