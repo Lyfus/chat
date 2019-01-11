@@ -1,1 +1,1 @@
-C:\Users\Mana\source\repos\chat\Chat\Chat\Chat.csproj;x86
+C:\Users\Simon\source\repos\Chat\Chat\Chat\Chat.csproj;x86
