@@ -91,5 +91,6 @@
       <RootProperty Name="Label" />
     </RootType>
     <RootType FullName="Chat.MessagePage" />
+    <RootType FullName="Chat.Register" />
   </Roots.RootTypes>
 </Roots>

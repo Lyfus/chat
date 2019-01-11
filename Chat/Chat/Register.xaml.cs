@@ -12,6 +12,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Chat.Classes;
+using Windows.Storage;
+using System.Collections.ObjectModel;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,9 +25,16 @@ namespace Chat
     /// </summary>
     public sealed partial class Register : Page
     {
+        private ObservableCollection<User> Users = new ObservableCollection<User>();
+
         public Register()
         {
             this.InitializeComponent();
+        }
+
+        private void Register_User(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

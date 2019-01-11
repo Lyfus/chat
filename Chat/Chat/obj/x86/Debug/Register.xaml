@@ -16,12 +16,13 @@
         </Grid.RowDefinitions>
         <TextBlock Text="Register" FontSize="42" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBox PlaceholderText="Username" x:Name="Username" FontSize="20" Height="40" MinWidth="200" MaxWidth="400" Margin="5,5,5,5"/>
-            <PasswordBox PlaceholderText="Password" x:Name="Password" FontSize="20" Height="40" MinWidth="200" MaxWidth="400" Margin="5,5,5,5"/>
-            <PasswordBox PlaceholderText="Confirm" x:Name="Confirm" FontSize="20" Height="40" MinWidth="200" MaxWidth="400" Margin="5,5,5,5"/>
+            <TextBox x:ConnectionId='3' PlaceholderText="Username" x:Name="Username" FontSize="20" Height="40" MinWidth="200" MaxWidth="400" Margin="5,5,5,5"/>
+            <PasswordBox x:ConnectionId='4' PlaceholderText="Password" x:Name="Password" FontSize="20" Height="40" MinWidth="200" MaxWidth="400" Margin="5,5,5,5"/>
+            <PasswordBox x:ConnectionId='5' PlaceholderText="Confirm" x:Name="Confirm" FontSize="20" Height="40" MinWidth="200" MaxWidth="400" Margin="5,5,5,5"/>
         </StackPanel>
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Orientation="Horizontal">
-            <Button Content="Register" FontSize="20" Width="100" Margin="5,5,5,5" Click="Register_User" />
+            <Button x:ConnectionId='2' Content="Register" FontSize="20" Width="100" Margin="5,5,5,5"                       />
         </StackPanel>
     </Grid>
 </Page>
+

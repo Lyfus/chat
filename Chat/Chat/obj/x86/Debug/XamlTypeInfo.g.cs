@@ -189,7 +189,7 @@ namespace Chat.Chat_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[16];
+            _typeNameTable = new string[17];
             _typeNameTable[0] = "Chat.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -206,8 +206,9 @@ namespace Chat.Chat_XamlTypeInfo
             _typeNameTable[13] = "System.Collections.Generic.List`1<Chat.Classes.User>";
             _typeNameTable[14] = "System.Collections.Generic.List`1<Chat.Classes.Group>";
             _typeNameTable[15] = "Chat.Classes.Group";
+            _typeNameTable[16] = "Chat.Register";
 
-            _typeTable = new global::System.Type[16];
+            _typeTable = new global::System.Type[17];
             _typeTable[0] = typeof(global::Chat.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -224,6 +225,7 @@ namespace Chat.Chat_XamlTypeInfo
             _typeTable[13] = typeof(global::System.Collections.Generic.List<global::Chat.Classes.User>);
             _typeTable[14] = typeof(global::System.Collections.Generic.List<global::Chat.Classes.Group>);
             _typeTable[15] = typeof(global::Chat.Classes.Group);
+            _typeTable[16] = typeof(global::Chat.Register);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -264,6 +266,7 @@ namespace Chat.Chat_XamlTypeInfo
         private object Activate_5_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Chat.Classes.Messages>(); }
         private object Activate_13_List() { return new global::System.Collections.Generic.List<global::Chat.Classes.User>(); }
         private object Activate_14_List() { return new global::System.Collections.Generic.List<global::Chat.Classes.Group>(); }
+        private object Activate_16_Register() { return new global::Chat.Register(); }
         private void VectorAdd_4_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Chat.Classes.Messages>)instance;
@@ -399,6 +402,13 @@ namespace Chat.Chat_XamlTypeInfo
                 userType.AddMemberName("Id");
                 userType.AddMemberName("Description");
                 userType.AddMemberName("Users");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 16:   //  Chat.Register
+                userType = new global::Chat.Chat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_16_Register;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

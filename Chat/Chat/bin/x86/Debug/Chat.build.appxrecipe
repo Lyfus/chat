@@ -412,6 +412,9 @@
     <AppxPackagedFile Include="D:\Users\Valentin\Documents\01-Valentin\Supinfo\Bsc\3WIN - Universal Windows App Development\Messagerie\Chat\Chat\bin\x86\Debug\MessagePage.xbf">
       <PackagePath>MessagePage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Valentin\Documents\01-Valentin\Supinfo\Bsc\3WIN - Universal Windows App Development\Messagerie\Chat\Chat\bin\x86\Debug\Register.xbf">
+      <PackagePath>Register.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
