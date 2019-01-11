@@ -25,6 +25,12 @@ namespace Chat
         public MainPage()
         {
             this.InitializeComponent();
+
+        }
+
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MessagePage));
         }
     }
 }

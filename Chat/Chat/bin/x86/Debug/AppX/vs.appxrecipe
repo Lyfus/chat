@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>LAPTOP-L2PQN06D</Machine>
-    <WindowsUser>Valentin</WindowsUser>
+    <Machine>LAPTOP-94B8JQJD</Machine>
+    <WindowsUser>Simon</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>7e62c84f-4a7b-4eca-83c5-6f7207b6fbb3</PackageIdentityName>
     <PackageIdentityPublisher>CN=Valentin</PackageIdentityPublisher>
-    <IntermediateOutputPath>D:\Users\Valentin\Documents\01-Valentin\Supinfo\Bsc\3WIN - Universal Windows App Development\Messagerie\Chat\Chat\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Simon\source\repos\Chat\Chat\Chat\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>D:\Users\Valentin\Documents\01-Valentin\Supinfo\Bsc\3WIN - Universal Windows App Development\Messagerie\Chat\Chat\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>B2A466936CAE21A174CC419D1C5CC71CE3088D9C76E8178F7F7492DFF8DFBE25</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\Simon\source\repos\Chat\Chat\Chat\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>C3F7DC320CF2E6A0CDB30B9D23A50400E50C01CDC14062CCD01F23EF8208B587</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>7e62c84f-4a7b-4eca-83c5-6f7207b6fbb3_1.0.0.0_x86__bcp11qa1rfadr</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>7e62c84f-4a7b-4eca-83c5-6f7207b6fbb3_bcp11qa1rfadr!App</RegisteredUserModeAppID>
     <RegisteredPackageID>7e62c84f-4a7b-4eca-83c5-6f7207b6fbb3</RegisteredPackageID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\Users\Valentin\Documents\01-Valentin\Supinfo\Bsc\3WIN - Universal Windows App Development\Messagerie\Chat\Chat\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Simon\source\repos\Chat\Chat\Chat\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-01-11T10:45:07.947</Modified>
+      <Modified>2019-01-11T11:02:59.637</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\Users\Valentin\Documents\01-Valentin\Supinfo\Bsc\3WIN - Universal Windows App Development\Messagerie\Chat\Chat\bin\x86\Debug\Chat.exe">
+    <AppxPackagedFile Include="C:\Users\Simon\source\repos\Chat\Chat\Chat\bin\x86\Debug\Chat.exe">
       <PackagePath>entrypoint\Chat.exe</PackagePath>
-      <Modified>2019-01-11T10:45:07.288</Modified>
+      <Modified>2019-01-11T11:02:59.288</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -294,7 +294,7 @@
       <PackagePath>System.Linq.Queryable.dll</PackagePath>
       <Modified>2016-06-11T21:13:58.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Valentin\.nuget\packages\system.net.http\4.1.0\runtimes\win\lib\netcore50\System.Net.Http.dll">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.net.http\4.1.0\runtimes\win\lib\netcore50\System.Net.Http.dll">
       <PackagePath>System.Net.Http.dll</PackagePath>
       <Modified>2016-06-11T21:13:58.000</Modified>
     </AppxPackagedFile>
@@ -494,67 +494,71 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T21:15:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Users\Valentin\Documents\01-Valentin\Supinfo\Bsc\3WIN - Universal Windows App Development\Messagerie\Chat\Chat\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Simon\source\repos\Chat\Chat\Chat\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2019-01-11T10:37:57.714</Modified>
+      <Modified>2019-01-11T10:51:31.979</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Users\Valentin\Documents\01-Valentin\Supinfo\Bsc\3WIN - Universal Windows App Development\Messagerie\Chat\Chat\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Simon\source\repos\Chat\Chat\Chat\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2019-01-11T10:37:57.698</Modified>
+      <Modified>2019-01-11T10:51:31.962</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Users\Valentin\Documents\01-Valentin\Supinfo\Bsc\3WIN - Universal Windows App Development\Messagerie\Chat\Chat\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Simon\source\repos\Chat\Chat\Chat\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-01-11T10:37:57.700</Modified>
+      <Modified>2019-01-11T10:51:31.963</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Users\Valentin\Documents\01-Valentin\Supinfo\Bsc\3WIN - Universal Windows App Development\Messagerie\Chat\Chat\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Simon\source\repos\Chat\Chat\Chat\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-01-11T10:37:57.701</Modified>
+      <Modified>2019-01-11T10:51:31.965</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Users\Valentin\Documents\01-Valentin\Supinfo\Bsc\3WIN - Universal Windows App Development\Messagerie\Chat\Chat\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Simon\source\repos\Chat\Chat\Chat\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-01-11T10:37:57.702</Modified>
+      <Modified>2019-01-11T10:51:31.966</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Users\Valentin\Documents\01-Valentin\Supinfo\Bsc\3WIN - Universal Windows App Development\Messagerie\Chat\Chat\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Simon\source\repos\Chat\Chat\Chat\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-01-11T10:37:57.702</Modified>
+      <Modified>2019-01-11T10:51:31.966</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Users\Valentin\Documents\01-Valentin\Supinfo\Bsc\3WIN - Universal Windows App Development\Messagerie\Chat\Chat\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Simon\source\repos\Chat\Chat\Chat\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-01-11T10:37:57.703</Modified>
+      <Modified>2019-01-11T10:51:31.967</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Users\Valentin\Documents\01-Valentin\Supinfo\Bsc\3WIN - Universal Windows App Development\Messagerie\Chat\Chat\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Simon\source\repos\Chat\Chat\Chat\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-01-11T10:37:57.704</Modified>
+      <Modified>2019-01-11T10:51:31.968</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Users\Valentin\Documents\01-Valentin\Supinfo\Bsc\3WIN - Universal Windows App Development\Messagerie\Chat\Chat\bin\x86\Debug\Chat.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Simon\source\repos\Chat\Chat\Chat\bin\x86\Debug\Chat.xr.xml">
       <PackagePath>Chat.xr.xml</PackagePath>
-      <Modified>2019-01-11T10:45:07.106</Modified>
+      <Modified>2019-01-11T11:02:59.134</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Users\Valentin\Documents\01-Valentin\Supinfo\Bsc\3WIN - Universal Windows App Development\Messagerie\Chat\Chat\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Simon\source\repos\Chat\Chat\Chat\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-01-11T10:45:07.148</Modified>
+      <Modified>2019-01-11T11:02:59.155</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Users\Valentin\Documents\01-Valentin\Supinfo\Bsc\3WIN - Universal Windows App Development\Messagerie\Chat\Chat\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Simon\source\repos\Chat\Chat\Chat\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-01-11T10:45:07.148</Modified>
+      <Modified>2019-01-11T11:02:59.156</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Simon\source\repos\Chat\Chat\Chat\bin\x86\Debug\MessagePage.xbf">
+      <PackagePath>MessagePage.xbf</PackagePath>
+      <Modified>2019-01-11T11:02:59.157</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2018-04-19T21:01:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Users\Valentin\Documents\01-Valentin\Supinfo\Bsc\3WIN - Universal Windows App Development\Messagerie\Chat\Chat\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Simon\source\repos\Chat\Chat\Chat\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-01-11T10:39:24.224</Modified>
+      <Modified>2019-01-11T11:01:08.763</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Users\Valentin\Documents\01-Valentin\Supinfo\Bsc\3WIN - Universal Windows App Development\Messagerie\Chat\Chat\bin\x86\Debug\Core\Chat.exe">
+    <AppxPackagedFile Include="C:\Users\Simon\source\repos\Chat\Chat\Chat\bin\x86\Debug\Core\Chat.exe">
       <PackagePath>Chat.exe</PackagePath>
-      <Modified>2019-01-11T10:45:07.940</Modified>
+      <Modified>2019-01-11T11:02:59.623</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
