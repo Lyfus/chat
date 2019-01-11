@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Chat.Classes
 {
-    class Messages
+    public class Messages
     {
         public int Id { get; set; }
-        DateTime PubDate { get; set; }
-        string Content { get; set; }
-        User User { get; set; }
+        public DateTime PubDate { get; set; }
+        public string Content { get; set; }
+        public User User { get; set; }
 
         public Messages(int id, DateTime pubDate, string content, User user)
         {

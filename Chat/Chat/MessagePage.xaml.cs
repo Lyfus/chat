@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Chat.Classes;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,8 +24,23 @@ namespace Chat
     /// </summary>
     public sealed partial class MessagePage : Page
     {
+        private ObservableCollection<Messages> _messages = new ObservableCollection<Messages>();
+        public ObservableCollection<Messages> Messages
+        {
+            get { return _messages; }
+            set { _messages = value; }
+        }
+
+        private List<User> _friend = new List<User>();
+        public List<User> Friends
+        {
+            get { return _friend; }
+            set { _friend = value; }
+        }
+
         public MessagePage()
         {
+            DataContext = this;
             this.InitializeComponent();
         }
     }

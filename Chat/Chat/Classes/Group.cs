@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chat.Classes
 {
-    class Group
+    public class Group
     {
         public int Id { get; set; }
         public int Description { get; set; }

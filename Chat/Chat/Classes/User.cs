@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chat.Classes
 {
-    class User
+    public class User
     {
         public int Id { get; set; }
         public string Pseudo { get; set; }

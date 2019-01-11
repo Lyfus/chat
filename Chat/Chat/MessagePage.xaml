@@ -10,13 +10,41 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="4*" />
-            <RowDefinition Height="1*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="7*" />
         </Grid.ColumnDefinitions>
+        <ListView ItemsSource="{x:Bind Friends}" Grid.Column="0" BorderBrush="Black" BorderThickness="2">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Pseudo}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel Grid.Column="1">
+            <ScrollViewer Height="650">
+                <ListView ItemsSource="{x:Bind Messages}" BorderBrush="Black" BorderThickness="2">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="{Binding Messages.User.Pseudo}"/>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Messages.Content}" />
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollViewer>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Width="1200" Height="100" />
+                <Button Content="Send" VerticalAlignment="Center" Width="106" />
+            </StackPanel>
+        </StackPanel>
     </Grid>
     <Page.BottomAppBar>
         <CommandBar>
