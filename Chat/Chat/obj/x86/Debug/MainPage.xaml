@@ -9,7 +9,17 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Bienvenue sur Chat !" FontSize="42" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBox PlaceholderText="Username" FontSize="20" Height="40" MinWidth="200" MaxWidth="400" Margin="5,5,5,5"/>
+            <PasswordBox PlaceholderText="Password" FontSize="20" Height="40" MinWidth="200" MaxWidth="400" Margin="5,5,5,5"/>
+        </StackPanel>
+        <Button Content="Login" FontSize="20" Width="100" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5,5,5,5" />
     </Grid>
 </Page>
 
