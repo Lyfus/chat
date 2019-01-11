@@ -27909,24 +27909,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Simon\\.nuget\\packages\\": {},
+    "C:\\Users\\Mana\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Simon\\source\\repos\\Chat\\Chat\\Chat\\Chat.csproj",
+      "projectUniqueName": "C:\\Users\\Mana\\source\\repos\\chat\\Chat\\Chat\\Chat.csproj",
       "projectName": "Chat",
-      "projectPath": "C:\\Users\\Simon\\source\\repos\\Chat\\Chat\\Chat\\Chat.csproj",
-      "packagesPath": "C:\\Users\\Simon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Simon\\source\\repos\\Chat\\Chat\\Chat\\obj\\",
+      "projectPath": "C:\\Users\\Mana\\source\\repos\\chat\\Chat\\Chat\\Chat.csproj",
+      "packagesPath": "C:\\Users\\Mana\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mana\\source\\repos\\chat\\Chat\\Chat\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Simon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mana\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
