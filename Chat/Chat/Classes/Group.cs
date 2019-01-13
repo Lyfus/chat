@@ -8,14 +8,14 @@ namespace Chat.Classes
 {
     public class Group
     {
-        public int Id { get; set; }
-        public int Description { get; set; }
+        public int IdGroup { get; set; }
+        public string Description { get; set; }
         private List<User> _users = new List<User>();
         public List<User> Users { get { return _users; } }
 
-        public Group(int id, int description)
+        public Group(int id, string description)
         {
-            Id = id;
+            IdGroup = id;
             Description = description;
         }
     }

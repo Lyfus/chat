@@ -5,6 +5,7 @@
     <RootPropertyPathName Name="Content" />
     <RootPropertyPathName Name="User" />
     <RootPropertyPathName Name="Pseudo" />
+    <RootPropertyPathName Name="Description" />
     <RootPropertyPathName Name="ConnectedUser" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>

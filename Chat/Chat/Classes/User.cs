@@ -10,7 +10,7 @@ namespace Chat.Classes
     {
         public int Id { get; set; }
         public string Pseudo { get; set; }
-        public List<string> Groups { get; set; }
+        public List<Group> Groups { get; set; }
         //public List<Group> Groups {
         //    get { return _groups; }
         //    set { _groups = value; }

@@ -16,11 +16,11 @@
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="7*" />
         </Grid.ColumnDefinitions>
-        <ListView x:ConnectionId='2'                                Grid.Column="0" BorderBrush="Black" BorderThickness="2">
+        <ListView x:ConnectionId='2'                              Grid.Column="0" BorderBrush="Black" BorderThickness="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <TextBlock Text="{Binding Pseudo}" />
+                        <TextBlock Text="{Binding Description}" />
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

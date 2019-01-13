@@ -16,11 +16,11 @@
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="7*" />
         </Grid.ColumnDefinitions>
-        <ListView ItemsSource="{x:Bind Friends}" Grid.Column="0" BorderBrush="Black" BorderThickness="2">
+        <ListView ItemsSource="{x:Bind Group}" Grid.Column="0" BorderBrush="Black" BorderThickness="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <TextBlock Text="{Binding Pseudo}" />
+                        <TextBlock Text="{Binding Description}" />
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
