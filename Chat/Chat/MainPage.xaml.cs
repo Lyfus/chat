@@ -28,10 +28,11 @@ namespace Chat
     {
         private static readonly HttpClient client = new HttpClient();
         string JsonObject;
+        string message;
+
         public MainPage()
         {
             this.InitializeComponent();
-
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
@@ -86,6 +87,16 @@ namespace Chat
 
             JsonObject = responseString;
             return true;
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            message = e.Parameter.ToString();
+            if (message != null)
+            {
+                affichage.Text = message;
+            }
         }
     }
 }
