@@ -20,29 +20,30 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <TextBlock Text="{Binding Description}" />
+                        <TextBlock x:ConnectionId='9' Tag="{Binding IdGroup}" Text="{Binding Description}"                     />
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
         <StackPanel Grid.Column="1">
-            <ScrollViewer Height="650">
-                <ListView x:ConnectionId='4'                                 BorderBrush="Black" BorderThickness="2">
+            <ScrollViewer x:ConnectionId='3' Height="650" x:Name="messageScrollView">
+                <ListView x:ConnectionId='6'                                 BorderBrush="Black" BorderThickness="2" x:Name="messageListView">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <TextBlock Text="{Binding Messages.User.Pseudo}"/>
-                                <StackPanel>
-                                    <TextBlock x:Name="textblock1" Text="{Binding Messages.Content}" />
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Username}"/>
+                                    <TextBlock Text="{Binding PubDate}" Margin="10 0 0 0"/>
                                 </StackPanel>
+                                <TextBlock x:Name="textblock1" Text="{Binding Content}" />
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
             </ScrollViewer>
             <StackPanel Orientation="Horizontal">
-                <TextBox x:ConnectionId='3' x:Name="textbox1" Width="1200" Height="100" />
-                <Button Content="Send" VerticalAlignment="Center" Width="106" />
+                <TextBox x:ConnectionId='4' x:Name="textbox1" Width="1200" Height="100" />
+                <Button x:ConnectionId='5' Content="Send" VerticalAlignment="Center" Width="106"                    />
             </StackPanel>
         </StackPanel>
     </Grid>

@@ -20,21 +20,22 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <TextBlock Text="{Binding Description}" />
+                        <TextBlock Tag="{Binding IdGroup}" Text="{Binding Description}" Tapped="Item_Tapped"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
         <StackPanel Grid.Column="1">
-            <ScrollViewer Height="650">
-                <ListView ItemsSource="{x:Bind Messages}" BorderBrush="Black" BorderThickness="2">
+            <ScrollViewer Height="650" x:Name="messageScrollView">
+                <ListView ItemsSource="{x:Bind Messages}" BorderBrush="Black" BorderThickness="2" x:Name="messageListView">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <TextBlock Text="{Binding Messages.User.Pseudo}"/>
-                                <StackPanel>
-                                    <TextBlock x:Name="textblock1" Text="{Binding Messages.Content}" />
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Username}"/>
+                                    <TextBlock Text="{Binding PubDate}" Margin="10 0 0 0"/>
                                 </StackPanel>
+                                <TextBlock x:Name="textblock1" Text="{Binding Content}" />
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
@@ -42,7 +43,7 @@
             </ScrollViewer>
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="textbox1" Width="1200" Height="100" />
-                <Button Content="Send" VerticalAlignment="Center" Width="106" />
+                <Button Content="Send" VerticalAlignment="Center" Width="106" Click="Send_Click" />
             </StackPanel>
         </StackPanel>
     </Grid>

@@ -46,6 +46,7 @@ namespace Chat
         User ConnectedUser;
         private static readonly HttpClient client = new HttpClient();
         string JsonObject;
+        string listMessages;
 
         public MessagePage()
         {
@@ -87,9 +88,91 @@ namespace Chat
             if (task.Result)
             {
                 List<Group> _group = JsonConvert.DeserializeObject<List<Group>>(JsonObject);
+                // Object User List
                 ConnectedUser.Groups = _group;
+                // Display List
                 Group = ConnectedUser.Groups;
             }
+        }
+
+        private void Send_Click(object sender, RoutedEventArgs e)
+        {
+            // Voir avec Byron pour distribution du message
+            /*
+             * à faire
+             */
+
+            // Mise en mémoire dans BDD
+            var message = textbox1.Text;
+            var pubdate = DateTime.Now.ToString();
+
+            var task = Task.Run<int>(() =>
+            {
+                return saveMessage(message, pubdate, ConnectedUser.IdUser.ToString());
+            });
+
+            int idMessage = task.Result;
+            string _pubdate = pubdate;
+            Messages sendMessage = new Messages(idMessage, _pubdate, message, ConnectedUser.Pseudo);
+
+            Messages.Add(sendMessage);
+            textbox1.Text = "";
+            double count = messageListView.Items.Count();
+            messageScrollView.ChangeView(0, count*50, 1);
+        }
+        
+        private async Task<int> saveMessage(string contenu, string pubdate, string idUser)
+        {
+            var values = new Dictionary<string, string>
+            {
+                { "Content", contenu },
+                { "Pubdate", pubdate },
+                { "IdUser", idUser }
+            };
+            var content = new FormUrlEncodedContent(values);
+            var response = await client.PostAsync("http://localhost/Chat/insertMessage.php", content);
+            var responseString = await response.Content.ReadAsStringAsync();
+
+            return Int32.Parse(responseString);
+        }
+
+        private void Item_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            TextBlock TappedGroup = (TextBlock)sender;
+            int idGroup = Int32.Parse(TappedGroup.Tag.ToString());
+            // 1 - Vider liste message
+            Messages.Clear();
+            // 2 - Lancer restApi pour récupérer la liste des messages inscrits dans le groupe
+            var task2 = Task.Run<bool>(() =>
+            {
+                return getMessageByGroupId(idGroup);
+            });
+            bool boule = task2.Result;
+            // 3 - Ajouter la liste à Messages
+            ObservableCollection<Messages> _BddMessages = JsonConvert.DeserializeObject<ObservableCollection<Messages>>(listMessages);
+            foreach(Messages child in _BddMessages)
+            {
+                Messages.Add(child);
+            }
+        }
+
+        private async Task<bool> getMessageByGroupId(int Id)
+        {
+            var values = new Dictionary<string, string>
+            {
+                { "idGroup", Id.ToString() },
+            };
+            var content = new FormUrlEncodedContent(values);
+            var response = await client.PostAsync("http://localhost/Chat/getMessageByGroupId.php", content);
+            var responseString = await response.Content.ReadAsStringAsync();
+
+            if (responseString == "\t")
+            {
+                return false;
+            }
+
+            listMessages = responseString;
+            return true;
         }
     }
 }

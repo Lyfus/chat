@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="Messages" />
     <RootPropertyPathName Name="Content" />
-    <RootPropertyPathName Name="User" />
-    <RootPropertyPathName Name="Pseudo" />
+    <RootPropertyPathName Name="PubDate" />
+    <RootPropertyPathName Name="Username" />
+    <RootPropertyPathName Name="IdGroup" />
     <RootPropertyPathName Name="Description" />
     <RootPropertyPathName Name="ConnectedUser" />
+    <RootPropertyPathName Name="Pseudo" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -34,6 +35,9 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Tag" />
+      <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="HorizontalAlignment" />
