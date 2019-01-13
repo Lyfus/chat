@@ -80,14 +80,15 @@ namespace Chat
             // Recup Group dans TaskAsync
             var task = Task.Run<bool>(() =>
             {
-                return getListGroupByUserId(ConnectedUser.Id);
+                return getListGroupByUserId(ConnectedUser.IdUser);
             });
 
             // Serialiser la liste de group récupérée en objets group
             if (task.Result)
             {
                 List<Group> _group = JsonConvert.DeserializeObject<List<Group>>(JsonObject);
-                Group = _group;
+                ConnectedUser.Groups = _group;
+                Group = ConnectedUser.Groups;
             }
         }
     }

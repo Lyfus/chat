@@ -375,7 +375,7 @@ namespace Chat.Chat_XamlTypeInfo
 
             case 12:   //  Chat.Classes.User
                 userType = new global::Chat.Chat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.AddMemberName("Id");
+                userType.AddMemberName("IdUser");
                 userType.AddMemberName("Pseudo");
                 userType.AddMemberName("Groups");
                 userType.SetIsLocalType();
@@ -501,15 +501,15 @@ namespace Chat.Chat_XamlTypeInfo
             var that = (global::Chat.Classes.Group)instance;
             return that.Users;
         }
-        private object get_9_User_Id(object instance)
+        private object get_9_User_IdUser(object instance)
         {
             var that = (global::Chat.Classes.User)instance;
-            return that.Id;
+            return that.IdUser;
         }
-        private void set_9_User_Id(object instance, object Value)
+        private void set_9_User_IdUser(object instance, object Value)
         {
             var that = (global::Chat.Classes.User)instance;
-            that.Id = (global::System.Int32)Value;
+            that.IdUser = (global::System.Int32)Value;
         }
         private object get_10_User_Pseudo(object instance)
         {
@@ -593,11 +593,11 @@ namespace Chat.Chat_XamlTypeInfo
                 xamlMember.Getter = get_8_Group_Users;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "Chat.Classes.User.Id":
+            case "Chat.Classes.User.IdUser":
                 userType = (global::Chat.Chat_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Chat.Classes.User");
-                xamlMember = new global::Chat.Chat_XamlTypeInfo.XamlMember(this, "Id", "Int32");
-                xamlMember.Getter = get_9_User_Id;
-                xamlMember.Setter = set_9_User_Id;
+                xamlMember = new global::Chat.Chat_XamlTypeInfo.XamlMember(this, "IdUser", "Int32");
+                xamlMember.Getter = get_9_User_IdUser;
+                xamlMember.Setter = set_9_User_IdUser;
                 break;
             case "Chat.Classes.User.Pseudo":
                 userType = (global::Chat.Chat_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Chat.Classes.User");

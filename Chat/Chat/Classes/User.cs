@@ -8,7 +8,7 @@ namespace Chat.Classes
 {
     public class User
     {
-        public int Id { get; set; }
+        public int IdUser { get; set; }
         public string Pseudo { get; set; }
         public List<Group> Groups { get; set; }
         //public List<Group> Groups {
@@ -18,7 +18,7 @@ namespace Chat.Classes
 
         public User(int id, string pseudo)
         {
-            Id = id;
+            IdUser = id;
             Pseudo = pseudo;           
         }
     }
