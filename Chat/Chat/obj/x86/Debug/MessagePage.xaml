@@ -19,8 +19,8 @@
         <ListView x:ConnectionId='2'                              Grid.Column="0" BorderBrush="Black" BorderThickness="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
-                        <TextBlock x:ConnectionId='9' Tag="{Binding IdGroup}" Text="{Binding Description}"                     />
+                    <StackPanel x:ConnectionId='8' Tag="{Binding IdGroup}"                     >
+                        <TextBlock Text="{Binding Description}" />
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

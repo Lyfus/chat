@@ -135,10 +135,10 @@ namespace Chat
 
             return Int32.Parse(responseString);
         }
-
+        
         private void Item_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            TextBlock TappedGroup = (TextBlock)sender;
+            StackPanel TappedGroup = (StackPanel)sender;
             int idGroup = Int32.Parse(TappedGroup.Tag.ToString());
             // 1 - Vider liste message
             Messages.Clear();

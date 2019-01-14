@@ -19,8 +19,8 @@
         <ListView ItemsSource="{x:Bind Group}" Grid.Column="0" BorderBrush="Black" BorderThickness="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Tag="{Binding IdGroup}" Text="{Binding Description}" Tapped="Item_Tapped"/>
+                    <StackPanel Tag="{Binding IdGroup}" Tapped="Item_Tapped">
+                        <TextBlock Text="{Binding Description}" />
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
