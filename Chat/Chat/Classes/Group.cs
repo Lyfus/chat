@@ -12,6 +12,7 @@ namespace Chat.Classes
         public string Description { get; set; }
         private List<User> _users = new List<User>();
         public List<User> Users { get { return _users; } }
+        
 
         public Group(int id, string description)
         {

@@ -350,6 +350,7 @@ namespace Chat.Chat_XamlTypeInfo
                 userType.AddMemberName("PubDate");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Username");
+                userType.AddMemberName("IdGroup");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -466,67 +467,77 @@ namespace Chat.Chat_XamlTypeInfo
             var that = (global::Chat.Classes.Messages)instance;
             that.Username = (global::System.String)Value;
         }
-        private object get_5_MessagePage_Group(object instance)
+        private object get_5_Messages_IdGroup(object instance)
+        {
+            var that = (global::Chat.Classes.Messages)instance;
+            return that.IdGroup;
+        }
+        private void set_5_Messages_IdGroup(object instance, object Value)
+        {
+            var that = (global::Chat.Classes.Messages)instance;
+            that.IdGroup = (global::System.Int32)Value;
+        }
+        private object get_6_MessagePage_Group(object instance)
         {
             var that = (global::Chat.MessagePage)instance;
             return that.Group;
         }
-        private void set_5_MessagePage_Group(object instance, object Value)
+        private void set_6_MessagePage_Group(object instance, object Value)
         {
             var that = (global::Chat.MessagePage)instance;
             that.Group = (global::System.Collections.Generic.List<global::Chat.Classes.Group>)Value;
         }
-        private object get_6_Group_IdGroup(object instance)
+        private object get_7_Group_IdGroup(object instance)
         {
             var that = (global::Chat.Classes.Group)instance;
             return that.IdGroup;
         }
-        private void set_6_Group_IdGroup(object instance, object Value)
+        private void set_7_Group_IdGroup(object instance, object Value)
         {
             var that = (global::Chat.Classes.Group)instance;
             that.IdGroup = (global::System.Int32)Value;
         }
-        private object get_7_Group_Description(object instance)
+        private object get_8_Group_Description(object instance)
         {
             var that = (global::Chat.Classes.Group)instance;
             return that.Description;
         }
-        private void set_7_Group_Description(object instance, object Value)
+        private void set_8_Group_Description(object instance, object Value)
         {
             var that = (global::Chat.Classes.Group)instance;
             that.Description = (global::System.String)Value;
         }
-        private object get_8_Group_Users(object instance)
+        private object get_9_Group_Users(object instance)
         {
             var that = (global::Chat.Classes.Group)instance;
             return that.Users;
         }
-        private object get_9_User_IdUser(object instance)
+        private object get_10_User_IdUser(object instance)
         {
             var that = (global::Chat.Classes.User)instance;
             return that.IdUser;
         }
-        private void set_9_User_IdUser(object instance, object Value)
+        private void set_10_User_IdUser(object instance, object Value)
         {
             var that = (global::Chat.Classes.User)instance;
             that.IdUser = (global::System.Int32)Value;
         }
-        private object get_10_User_Pseudo(object instance)
+        private object get_11_User_Pseudo(object instance)
         {
             var that = (global::Chat.Classes.User)instance;
             return that.Pseudo;
         }
-        private void set_10_User_Pseudo(object instance, object Value)
+        private void set_11_User_Pseudo(object instance, object Value)
         {
             var that = (global::Chat.Classes.User)instance;
             that.Pseudo = (global::System.String)Value;
         }
-        private object get_11_User_Groups(object instance)
+        private object get_12_User_Groups(object instance)
         {
             var that = (global::Chat.Classes.User)instance;
             return that.Groups;
         }
-        private void set_11_User_Groups(object instance, object Value)
+        private void set_12_User_Groups(object instance, object Value)
         {
             var that = (global::Chat.Classes.User)instance;
             that.Groups = (global::System.Collections.Generic.List<global::Chat.Classes.Group>)Value;
@@ -569,47 +580,53 @@ namespace Chat.Chat_XamlTypeInfo
                 xamlMember.Getter = get_4_Messages_Username;
                 xamlMember.Setter = set_4_Messages_Username;
                 break;
+            case "Chat.Classes.Messages.IdGroup":
+                userType = (global::Chat.Chat_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Chat.Classes.Messages");
+                xamlMember = new global::Chat.Chat_XamlTypeInfo.XamlMember(this, "IdGroup", "Int32");
+                xamlMember.Getter = get_5_Messages_IdGroup;
+                xamlMember.Setter = set_5_Messages_IdGroup;
+                break;
             case "Chat.MessagePage.Group":
                 userType = (global::Chat.Chat_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Chat.MessagePage");
                 xamlMember = new global::Chat.Chat_XamlTypeInfo.XamlMember(this, "Group", "System.Collections.Generic.List`1<Chat.Classes.Group>");
-                xamlMember.Getter = get_5_MessagePage_Group;
-                xamlMember.Setter = set_5_MessagePage_Group;
+                xamlMember.Getter = get_6_MessagePage_Group;
+                xamlMember.Setter = set_6_MessagePage_Group;
                 break;
             case "Chat.Classes.Group.IdGroup":
                 userType = (global::Chat.Chat_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Chat.Classes.Group");
                 xamlMember = new global::Chat.Chat_XamlTypeInfo.XamlMember(this, "IdGroup", "Int32");
-                xamlMember.Getter = get_6_Group_IdGroup;
-                xamlMember.Setter = set_6_Group_IdGroup;
+                xamlMember.Getter = get_7_Group_IdGroup;
+                xamlMember.Setter = set_7_Group_IdGroup;
                 break;
             case "Chat.Classes.Group.Description":
                 userType = (global::Chat.Chat_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Chat.Classes.Group");
                 xamlMember = new global::Chat.Chat_XamlTypeInfo.XamlMember(this, "Description", "String");
-                xamlMember.Getter = get_7_Group_Description;
-                xamlMember.Setter = set_7_Group_Description;
+                xamlMember.Getter = get_8_Group_Description;
+                xamlMember.Setter = set_8_Group_Description;
                 break;
             case "Chat.Classes.Group.Users":
                 userType = (global::Chat.Chat_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Chat.Classes.Group");
                 xamlMember = new global::Chat.Chat_XamlTypeInfo.XamlMember(this, "Users", "System.Collections.Generic.List`1<Chat.Classes.User>");
-                xamlMember.Getter = get_8_Group_Users;
+                xamlMember.Getter = get_9_Group_Users;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Chat.Classes.User.IdUser":
                 userType = (global::Chat.Chat_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Chat.Classes.User");
                 xamlMember = new global::Chat.Chat_XamlTypeInfo.XamlMember(this, "IdUser", "Int32");
-                xamlMember.Getter = get_9_User_IdUser;
-                xamlMember.Setter = set_9_User_IdUser;
+                xamlMember.Getter = get_10_User_IdUser;
+                xamlMember.Setter = set_10_User_IdUser;
                 break;
             case "Chat.Classes.User.Pseudo":
                 userType = (global::Chat.Chat_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Chat.Classes.User");
                 xamlMember = new global::Chat.Chat_XamlTypeInfo.XamlMember(this, "Pseudo", "String");
-                xamlMember.Getter = get_10_User_Pseudo;
-                xamlMember.Setter = set_10_User_Pseudo;
+                xamlMember.Getter = get_11_User_Pseudo;
+                xamlMember.Setter = set_11_User_Pseudo;
                 break;
             case "Chat.Classes.User.Groups":
                 userType = (global::Chat.Chat_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Chat.Classes.User");
                 xamlMember = new global::Chat.Chat_XamlTypeInfo.XamlMember(this, "Groups", "System.Collections.Generic.List`1<Chat.Classes.Group>");
-                xamlMember.Getter = get_11_User_Groups;
-                xamlMember.Setter = set_11_User_Groups;
+                xamlMember.Getter = get_12_User_Groups;
+                xamlMember.Setter = set_12_User_Groups;
                 break;
             }
             return xamlMember;

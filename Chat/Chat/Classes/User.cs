@@ -16,10 +16,10 @@ namespace Chat.Classes
         //    set { _groups = value; }
         //}
 
-        public User(int id, string pseudo)
+        public User(int id, string pseudo, int actualgroup)
         {
             IdUser = id;
-            Pseudo = pseudo;           
+            Pseudo = pseudo;
         }
     }
 }

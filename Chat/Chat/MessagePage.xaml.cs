@@ -47,11 +47,19 @@ namespace Chat
         private static readonly HttpClient client = new HttpClient();
         string JsonObject;
         string listMessages;
+        int currentGroup = -1;
 
         public MessagePage()
         {
             DataContext = this;
             this.InitializeComponent();
+            if(currentGroup == -1)
+            {
+                textbox1.IsReadOnly = true;
+            }
+            else {
+                textbox1.IsReadOnly = false;
+            }
         }
 
         private async Task<bool> getListGroupByUserId(int Id)
@@ -108,12 +116,12 @@ namespace Chat
 
             var task = Task.Run<int>(() =>
             {
-                return saveMessage(message, pubdate, ConnectedUser.IdUser.ToString());
+                return saveMessage(message, pubdate, ConnectedUser.IdUser.ToString(), currentGroup);
             });
 
             int idMessage = task.Result;
             string _pubdate = pubdate;
-            Messages sendMessage = new Messages(idMessage, _pubdate, message, ConnectedUser.Pseudo);
+            Messages sendMessage = new Messages(idMessage, _pubdate, message, ConnectedUser.Pseudo, currentGroup);
 
             Messages.Add(sendMessage);
             textbox1.Text = "";
@@ -121,13 +129,14 @@ namespace Chat
             messageScrollView.ChangeView(0, count*50, 1);
         }
         
-        private async Task<int> saveMessage(string contenu, string pubdate, string idUser)
+        private async Task<int> saveMessage(string contenu, string pubdate, string idUser, int IdGroup)
         {
             var values = new Dictionary<string, string>
             {
                 { "Content", contenu },
                 { "Pubdate", pubdate },
-                { "IdUser", idUser }
+                { "IdUser", idUser },
+                { "IdGroup", IdGroup.ToString() }
             };
             var content = new FormUrlEncodedContent(values);
             var response = await client.PostAsync("http://localhost/Chat/insertMessage.php", content);
@@ -154,6 +163,9 @@ namespace Chat
             {
                 Messages.Add(child);
             }
+            // Dévérouillage du textbox lors de la séléction d'un group
+            textbox1.IsReadOnly = false;
+            currentGroup = idGroup;
         }
 
         private async Task<bool> getMessageByGroupId(int Id)
