@@ -1,1 +1,1 @@
-C:\Users\Simon\source\repos\Chat\Chat\Chat\Chat.csproj;x86
+D:\Chat Instantané\chat\Chat\Chat\Chat.csproj;x86

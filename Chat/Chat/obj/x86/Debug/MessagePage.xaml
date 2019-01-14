@@ -19,7 +19,7 @@
         <ListView x:ConnectionId='2'                              Grid.Column="0" BorderBrush="Black" BorderThickness="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel x:ConnectionId='8' Tag="{Binding IdGroup}"                     >
+                    <StackPanel x:ConnectionId='9' Tag="{Binding IdGroup}"                     >
                         <TextBlock Text="{Binding Description}" />
                     </StackPanel>
                 </DataTemplate>
@@ -27,7 +27,7 @@
         </ListView>
         <StackPanel Grid.Column="1">
             <ScrollViewer x:ConnectionId='3' Height="650" x:Name="messageScrollView">
-                <ListView x:ConnectionId='6'                                 BorderBrush="Black" BorderThickness="2" x:Name="messageListView">
+                <ListView x:ConnectionId='7'                                 BorderBrush="Black" BorderThickness="2" x:Name="messageListView">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
@@ -43,7 +43,8 @@
             </ScrollViewer>
             <StackPanel Orientation="Horizontal">
                 <TextBox x:ConnectionId='4' x:Name="textbox1" Width="1200" Height="100" />
-                <Button x:ConnectionId='5' Content="Send" VerticalAlignment="Center" Width="106"                    />
+                <Button x:ConnectionId='5' Content="Send" VerticalAlignment="Top" Width="106"                    HorizontalAlignment="Center" Margin="0,0,0,0" />
+                <Button x:ConnectionId='6' Content="Connect"                      />
             </StackPanel>
         </StackPanel>
     </Grid>

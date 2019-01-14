@@ -6,6 +6,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Sockets;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.Data.Json;
@@ -29,7 +30,11 @@ namespace Chat
     
     public sealed partial class MessagePage : Page
     {
+        System.Net.Sockets.TcpClient clientSocket = new System.Net.Sockets.TcpClient();
+        NetworkStream serverStream = default(NetworkStream);
+        string readData = null;
         private ObservableCollection<Messages> _messages = new ObservableCollection<Messages>();
+
         public ObservableCollection<Messages> Messages
         {
             get { return _messages; }
@@ -102,13 +107,26 @@ namespace Chat
                 Group = ConnectedUser.Groups;
             }
         }
+        private void Connect_Click(object sender, RoutedEventArgs e)
+        {
+            byte[] outStream = System.Text.Encoding.ASCII.GetBytes(ConnectedUser.Pseudo + "$");
+            serverStream.Write(outStream, 0, outStream.Length);
+            serverStream.Flush();
+        }
 
         private void Send_Click(object sender, RoutedEventArgs e)
         {
-            // Voir avec Byron pour distribution du message
-            /*
-             * à faire
-             */
+            // Ma partie (byron)
+                readData = "Conected to Chat Server ...";
+                msg();
+                clientSocket.ConnectAsync("10.29.18.145", 8888);
+                serverStream = clientSocket.GetStream();
+
+                byte[] outStream = System.Text.Encoding.ASCII.GetBytes(textbox1.Text + "$");
+                serverStream.Write(outStream, 0, outStream.Length);
+                serverStream.Flush();
+            //
+
 
             // Mise en mémoire dans BDD
             var message = textbox1.Text;
@@ -185,6 +203,25 @@ namespace Chat
 
             listMessages = responseString;
             return true;
+        }
+
+        private void getMessage()
+        {
+            while (true)
+            {
+                serverStream = clientSocket.GetStream();
+                int buffSize = 0;
+                byte[] inStream = new byte[10025];
+                buffSize = clientSocket.ReceiveBufferSize;
+                serverStream.Read(inStream, 0, buffSize);
+                string returndata = System.Text.Encoding.ASCII.GetString(inStream);
+                readData = "" + returndata;
+                msg();
+            }
+        }
+        private void msg()
+        {
+            textbox1.Text = textbox1.Text + Environment.NewLine + " >> " + readData;
         }
     }
 }
